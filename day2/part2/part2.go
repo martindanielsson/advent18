@@ -11,10 +11,14 @@ import (
 func main() {
 	input, err := os.Open("../input")
 
+	if err != nil {
+		fmt.Println("error reading file", err);
+	}
+
 	barcodes, err := Parse(input)
 
 	if err != nil {
-		fmt.Println("error reading file", err);
+		fmt.Println("error parsing file", err);
 	}
 
 	fmt.Println("the common characters are", FindCommon(barcodes))
