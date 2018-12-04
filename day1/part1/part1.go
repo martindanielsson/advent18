@@ -7,7 +7,7 @@ import "os"
 import "strconv"
 
 func main() {
-	input, err := os.Open("./input")
+	input, err := os.Open("../input")
 	if err != nil {
 	    fmt.Println("error reading file", err);
 	}
