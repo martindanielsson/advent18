@@ -48,8 +48,6 @@ func CountBarcodes(barcodes []string) int {
 			chars[split[s]]++
 		}
 
-		fmt.Println(chars)
-
 		for c := range chars {
 			if chars[c] == 2 && !hasTwo {
 				hasTwo = true
@@ -59,8 +57,6 @@ func CountBarcodes(barcodes []string) int {
 				three++
 			}
 		}
-
-		fmt.Println(hasTwo, hasThree, two, three)
 	}
 
 	return two * three
